@@ -1,6 +1,7 @@
 require_relative 'config/environment'
-require_relative 'models/course.rb'
-require_relative 'models/student.rb'
+# require_relative 'models/course.rb'
+# require_relative 'models/student.rb'
+Dir["/models/*.rb"].each {|file| require file }
 
 class App < Sinatra::Base
   get '/' do
